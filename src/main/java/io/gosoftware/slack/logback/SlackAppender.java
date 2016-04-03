@@ -4,6 +4,8 @@ import static com.google.common.base.Preconditions.checkNotNull;
 
 import java.util.Optional;
 
+import org.slf4j.MDC;
+
 import com.google.api.client.repackaged.com.google.common.base.Joiner;
 import com.google.common.annotations.VisibleForTesting;
 
@@ -54,6 +56,9 @@ public class SlackAppender extends UnsynchronizedAppenderBase<ILoggingEvent> {
     return JOINER.join(parts);
   }
 
+  /**
+   * Each customization can be overridden via the {@link MDC}.
+   */
   @VisibleForTesting
   protected Optional<String> mdc(ILoggingEvent eventObject, String key) {
     return Optional.ofNullable(eventObject.getMDCPropertyMap().get(key(PREFIX, key)));
