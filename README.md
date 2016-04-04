@@ -45,5 +45,5 @@ logging:
 | channel | The Slack channel to send each log message. The channel must begin with a `#` | Y |
 | username | The Slack username used to send the logs | N |
 | iconEmoji | The icon, as an emoji, which appears next to the username for each log message sent to the Slack channel. The emoji must start and end with a `:` | N |
-| iconUrl | THe icon, as a URL, whic appears next to the username for each log message sent to the Slack channel | N |
+| iconUrl | The icon, as a URL, whic appears next to the username for each log message sent to the Slack channel | N |
 
